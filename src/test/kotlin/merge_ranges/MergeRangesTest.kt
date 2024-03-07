@@ -14,7 +14,10 @@ class MergeRangesTest {
             100..200, 1..11, 12..14, 16..25,
         )
 
-        // when and then
-        assertThat(expected).containsExactlyInAnyOrderElementsOf(mergeRanges(initial))
+        // when
+        val result = mergeRanges(initial)
+
+        // then
+        assertThat(result).containsExactlyInAnyOrderElementsOf(expected)
     }
 }
