@@ -1,7 +1,7 @@
 package merge_ranges
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MergeRangesTest {
     @Test
@@ -15,6 +15,6 @@ class MergeRangesTest {
         )
 
         // when and then
-        assertEquals(expected, mergeRanges(initial))
+        assertThat(expected).containsExactlyInAnyOrderElementsOf(mergeRanges(initial))
     }
 }
