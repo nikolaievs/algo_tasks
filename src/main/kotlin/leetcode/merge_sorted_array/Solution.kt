@@ -43,7 +43,7 @@ package leetcode.merge_sorted_array
  */
 class Solution {
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
-        nums2.forEachIndexed { index, el -> nums1.set(m + index, el) }
+        nums2.forEachIndexed { index, el -> nums1[m + index] = el }
         nums1.sort()
     }
 }
